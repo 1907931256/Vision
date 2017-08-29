@@ -106,7 +106,7 @@ void calibration::run(){
             }
 
             //! > emit a signal for MainWindow update its image
-            emit has_new_image();
+            Q_EMIT has_new_image();
         }else{
             //! > If the vision reception was set false, we set the blue screen and release cv::VideoCapture
             if(start_finish){

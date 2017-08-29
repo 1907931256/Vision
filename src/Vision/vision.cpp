@@ -108,7 +108,7 @@ void vision::run(){
                 init_camera++;
             }
 
-            emit has_new_state();
+            Q_EMIT has_new_state();
         }else{
             if(start_finish){
                 start_finish = false;

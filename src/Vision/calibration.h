@@ -154,7 +154,7 @@ public:
     //! alloc the labels of pose from objects in workspace
     void alloc_calibration(Calibration*);
 
-signals:
+Q_SIGNAL
     void has_new_image();
 };
 

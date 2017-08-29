@@ -105,7 +105,7 @@ public:
     string get_path_video();
     void finish();
 
-signals:
+Q_SIGNAL
     void has_new_state();
 };
 
