@@ -147,7 +147,7 @@ namespace common{
     ball_s->k_v_pose.x = state.v_ball_kalman.x;
     ball_s->k_v_pose.y = state.v_ball_kalman.y;
 
-    global_state.ball = ball_s;
+    global_state.ball = *ball_s;
 
     switch(exec.team_color[0]){
       case YELLOW:{
@@ -201,9 +201,9 @@ namespace common{
           robot_s.k_v_pose.yaw = state.robots_kalman[i].v_pose.z;
 
           if(exec.secundary_color_1[i] != UNKNOWN){
-            robot_s->color.r = c.colors.at(exec.secundary_color_1[i]).rgb[0];
-            robot_s->color.g = c.colors.at(exec.secundary_color_1[i]).rgb[1];
-            robot_s->color.b = c.colors.at(exec.secundary_color_1[i]).rgb[2];
+            robot_s.color.r = c.colors.at(exec.secundary_color_1[i]).rgb[0];
+            robot_s.color.g = c.colors.at(exec.secundary_color_1[i]).rgb[1];
+            robot_s.color.b = c.colors.at(exec.secundary_color_1[i]).rgb[2];
           }
 
           global_state.robots_yellow[i] = robot_s;

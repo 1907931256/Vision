@@ -33,8 +33,8 @@ MainWindow::MainWindow(QWidget *parent) :
 
     // Inicializa ROS
     int c = 1;
-    char *v = "";
-    ros::init(c, &v, "vision");
+    char *l = "";
+    ros::init(c, &l, "vision");
 
     //! Define the interface VSS
     Interface <vss_sdk::global_state> interface;
@@ -1423,6 +1423,7 @@ void MainWindow::getNewImageCalib(){
 }
 
 void MainWindow::getNewStateVision(){
+    Interface <vss_sdk::global_state> interface;
     image->setPixmap(QPixmap::fromImage(mat2Image(vi->raw_in)));
 
     global_state = State2global_state(state, execConfig);

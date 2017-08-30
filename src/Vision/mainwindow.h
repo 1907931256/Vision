@@ -68,7 +68,7 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
-public slots:
+Q_SLOT
     // QCustomLabel
     //! Method that get the signal from move the mouse inside QCustomLabel input image
     void mouseCurrentPos();
